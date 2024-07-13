@@ -1,0 +1,132 @@
+/* 
+1-:Setting
+2-:Header-style
+3-:Menu-style
+4-:Responsive-design
+5-:Button-style
+ */
+ 
+ /* ==========================
+ 1-:Setting
+ ============================== */
+ button{
+    all: unset;
+}
+button:hover{
+   cursor: pointer;
+}
+button:active{
+    scale: 0.9;
+    transition: 1s;
+}
+ /* ==========================
+ 2-:Header-style
+ ============================== */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 1.2rem;
+}
+header  ul{
+    display: flex;
+    gap: 15px; 
+    color: white;
+}
+header nav{
+    background-color:   var(--secondary);
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgb(145, 129, 129);
+}
+header nav ul li  a{
+    color: var(--CRtitle);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+}
+header nav ul li a:hover{
+    color:var(--green);
+}
+header button{
+    text-transform: capitalize;
+    font-size: 1.rem;
+}
+.active{
+    color: green;
+}
+ /* ==========================
+ 3-:Menu-style
+ ============================== */
+.menu{
+    position: fixed;
+    background-color: rgb(5, 5, 5);
+    inset: 0;
+}
+@keyframes close{
+    0% {scale: 0;}
+    50% {scale: 1.1;}
+    100% {scale: 1;}
+  }
+.menu ul{
+    animation: close 1s 1;
+    width: 80%;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 15px;
+    padding: 20px;
+    border-radius: 20px;
+   margin: 20px auto;
+}
+.menu ul li a{
+    color: var(--CRtitle);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+}
+.menu ul li:not(:last-child,:first-child){
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+ /* ==========================
+ 4-:Responsive-design
+ ============================== */
+@media (max-width:700px) {
+    header nav{
+        display: none;
+    }
+   
+  
+}
+@media (min-width:701px) {
+    header .showmodal{
+        display: none;
+    }
+    header .menu{
+        display: none;
+    }
+}
+ /* ==========================
+ 5-:Button-style
+ ============================== */
+header .icon-moon-o,header .icon-menu,header .icon-sun{
+    background-color: var(--secondary);
+    color: var(--CRtitle);
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid rgba(218, 165, 32, 0.24);
+}
+header .icon-moon-o:hover,header .icon-menu:hover,header .icon-sun:hover{
+    border: 1px solid rgb(218, 165, 32);
+}
+header  .icon-close{
+    color: red;
+    font-size: 25px;
+}
+header  .icon-close:hover{
+    transition: 1s;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,126 @@
+
+/* =================================
+Contact && section-left
+================================== */
+.contact{
+    padding: 50px 20px;
+    display: flex;
+    align-items:center;
+    column-gap: 20px;
+}
+.contact .sectionLeft{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    text-transform: capitalize;
+}
+.contact .sectionLeft .up span:first-child{
+    padding: 15px 0;
+    display: flex;
+   align-items: center;
+   column-gap: 20px;
+}
+.contact .sectionLeft .up span:first-child h1{
+    color: var(--CRtitle);
+}
+.icon-mail{
+    background-color: var(--secondary);
+    color: var(--CRtitle);
+    font-size: 40px;
+}
+.contact .sectionLeft .up p{
+    font-size: 13px;
+    color: var(--grey);
+}
+.contact .sectionLeft form{
+    display: grid;
+    text-transform: capitalize;
+}
+.contact .sectionLeft form span:nth-child(1) input{
+width: 100%;
+background-color: rgba(63, 63, 70, 0.6);
+border-radius: 3px;
+border: 1px solid var(--grey);
+padding: 5px 10px;
+}
+.contact .sectionLeft form span:nth-child(2) textarea{
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(63, 63, 70, 0.6);
+    border: 1px solid var(--grey);
+}
+.contact .sectionLeft form span:nth-child(2) input::placeholder{
+    position: relative;
+    top: -80px;
+}
+.contact .sectionLeft form button{
+    width:60px;
+}
+.contact .sectionLeft form span{
+    margin: 20px 0;
+    display: flex;
+    column-gap: 20px;
+}
+.contact .sectionLeft form span label{
+    color: var(--CRtitle);
+}
+.contact .sectionLeft form button{
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: var(--grey);
+    color: var(--primary);
+    cursor: pointer;
+}
+/* ================================
+Responsive design
+=================================== */
+@media (max-width:600px) {
+    .contact .sectionRight{
+        display: none;
+    }
+    .contact .sectionLeft .up span,.contact .sectionLeft .up { 
+        justify-content: center;
+        text-align: center;
+    }
+    .contact .sectionLeft form{
+        justify-content: center;
+    }
+    .contact .sectionLeft .up p{
+        line-height: 1.5;
+    }
+    .contact .sectionLeft form span{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .contact .sectionLeft form span input{
+        width:100px;
+    }
+    .contact .sectionLeft form span textarea {
+        width: 100px;
+    }
+    .contact .sectionLeft .up span:first-child h1{
+        font-size: 25px;
+    }
+    .icon-mail{
+        font-size: 30px;
+    }
+}
+@media (max-width:1050px) {
+    .contact{
+        display: flex;
+        flex-direction: column;
+        row-gap:100px;
+    }
+    .contact .sectionLeft{
+        margin: auto;
+    }
+    .contact .sectionRight{
+        margin: auto;
+    }
+}

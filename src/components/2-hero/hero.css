@@ -1,0 +1,56 @@
+.hero{
+    padding: 0 20px;
+    display: flex;
+}
+.hero .slideleft{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero .slideleft .avatar img{
+    width: 90px;
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+}
+.hero .slideleft h1{
+    font-size:40px;
+    color: var(--CRtitle);
+}
+.hero .slideleft h1 span{
+    color:rgb(88, 202, 88);
+}
+.hero .slideleft p{
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: var(--CRtitle);
+}
+.hero .slideleft .social{
+    display: flex;
+    column-gap: 15px;
+    background-color: var(--secondary);
+    color: var(--CRtitle);
+}
+.hero .slideleft .social .icon-instagram:hover,
+.hero .slideleft .social .icon-linkedin-square:hover,
+.hero .slideleft .social .icon-github:hover{
+    cursor: pointer;
+    
+}
+.hero .slideright{
+    max-width: 380px;
+}
+.icon-verified{
+    color: var(--green);
+}
+@media (max-width:930px) {
+    .hero .slideright{
+        display: none;
+    }
+
+}
+@media (max-width:500px) {
+    .hero .slideleft h1{
+        font-size: 20px;
+    }
+}
